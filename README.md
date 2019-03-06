@@ -13,4 +13,4 @@ sample project for natabase interview
 	- password
 	- grant_type
 	
-* to use the token to call an api, enter the token as a value to the Authorization header in this format Bearer <token>
+* to use the token to call an api, enter the token as a value to the Authorization header in this format Bearer [token]
