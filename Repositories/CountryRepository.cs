@@ -29,6 +29,18 @@ namespace NatterbaseProject
             await _db.SaveChangesAsync();
         }
 
+        public async Task DeleteCountry(int id)
+        {
+            var country = _db.Countries.Find(id);
+            _db.Entry(country).State = EntityState.Deleted;
+            await _db.SaveChangesAsync();
+        }
+
+        public async Task<List<Country>> GetAllCountries()
+        {
+            var countries = await _db.Countries.ToListAsync();
+            return countries;
+        }
         public void Dispose()
         {
             _db.Dispose();
