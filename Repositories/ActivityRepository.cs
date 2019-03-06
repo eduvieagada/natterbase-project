@@ -26,5 +26,11 @@ namespace NatterbaseProject.Repositories
             var activities = await _db.Activities.Where(x => x.Name == name).ToListAsync();
             return activities;
         }
+
+        public void CreateActivity(Activity activity)
+        {
+            _db.Activities.Add(activity);
+            _db.SaveChanges();
+        }
     }
 }

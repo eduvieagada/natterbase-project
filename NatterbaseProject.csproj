@@ -187,6 +187,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\ActivityLoggingFilterAttribute.cs" />
     <Compile Include="App_Start\AppConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -230,6 +231,14 @@
     <Compile Include="Migrations\201903060731497_added name to activity.cs" />
     <Compile Include="Migrations\201903060731497_added name to activity.Designer.cs">
       <DependentUpon>201903060731497_added name to activity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903060800155_changed activity date from string to datetime.cs" />
+    <Compile Include="Migrations\201903060800155_changed activity date from string to datetime.Designer.cs">
+      <DependentUpon>201903060800155_changed activity date from string to datetime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903060807289_added controller name to activity.cs" />
+    <Compile Include="Migrations\201903060807289_added controller name to activity.Designer.cs">
+      <DependentUpon>201903060807289_added controller name to activity.cs</DependentUpon>
     </Compile>
     <Compile Include="Repositories\ActivityRepository.cs" />
     <Compile Include="Repositories\CountryRepository.cs" />
@@ -348,6 +357,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903060731497_added name to activity.resx">
       <DependentUpon>201903060731497_added name to activity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903060800155_changed activity date from string to datetime.resx">
+      <DependentUpon>201903060800155_changed activity date from string to datetime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903060807289_added controller name to activity.resx">
+      <DependentUpon>201903060807289_added controller name to activity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

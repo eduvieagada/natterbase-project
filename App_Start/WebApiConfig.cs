@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
+using NatterbaseProject.App_Start;
 using Newtonsoft.Json.Serialization;
 
 namespace NatterbaseProject
@@ -16,6 +17,7 @@ namespace NatterbaseProject
             // Configure Web API to use only bearer token authentication.
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
+            config.Filters.Add(new ActivityLoggingFilterAttribute());
 
             // Web API routes
             config.MapHttpAttributeRoutes();
