@@ -8,7 +8,7 @@ using System.Web;
 
 namespace NatterbaseProject.Repositories
 {
-    public class ActivityRepository : IDisposable
+    public class ActivityRepository : IActivityRepository
     {
         private CountryDb _db;
         public ActivityRepository()

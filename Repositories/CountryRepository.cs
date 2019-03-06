@@ -1,4 +1,5 @@
 ﻿using NatterbaseProject.Models;
+using NatterbaseProject.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -8,7 +9,7 @@ using System.Web;
 
 namespace NatterbaseProject
 {
-    public class CountryRepository : IDisposable
+    public class CountryRepository : ICountryRepository
     {
         private CountryDb _db;
         public CountryRepository()
