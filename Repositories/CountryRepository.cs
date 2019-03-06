@@ -41,6 +41,11 @@ namespace NatterbaseProject
             var countries = await _db.Countries.ToListAsync();
             return countries;
         }
+        public async Task<Country> FindCountry(int id)
+        {
+            var country = await _db.Countries.FindAsync(id);
+            return country;
+        }
         public void Dispose()
         {
             _db.Dispose();

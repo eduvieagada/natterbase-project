@@ -4,15 +4,13 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace NatterbaseProject.Models
+namespace NatterbaseProject.ViewModels
 {
-    public class Country
+    public class CountryViewModel
     {
-        public int Id { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]
         public string Continent { get; set; }
-        public DateTime DateModified { get; set; }
     }
 }

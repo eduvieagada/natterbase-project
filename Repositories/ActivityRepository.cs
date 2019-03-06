@@ -21,9 +21,9 @@ namespace NatterbaseProject.Repositories
             _db.Dispose();
         }
 
-        public async Task<List<Activity>> GetActivities()
+        public async Task<List<Activity>> GetActivities(string name)
         {
-            var activities = await _db.Activities.ToListAsync();
+            var activities = await _db.Activities.Where(x => x.Name == name).ToListAsync();
             return activities;
         }
     }
