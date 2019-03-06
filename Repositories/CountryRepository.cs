@@ -1,5 +1,6 @@
 ﻿using NatterbaseProject.Models;
 using NatterbaseProject.Repositories;
+using PagedList;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -37,9 +38,9 @@ namespace NatterbaseProject
             await _db.SaveChangesAsync();
         }
 
-        public async Task<List<Country>> GetAllCountries()
+        public async Task<List<Country>> GetAllCountries(int index, int size)
         {
-            var countries = await _db.Countries.ToListAsync();
+            var countries = await Task.Run(() => _db.Countries.ToPagedList(index, size).ToList());
             return countries;
         }
         public async Task<Country> FindCountry(int id)

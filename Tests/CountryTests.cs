@@ -17,7 +17,7 @@ namespace NatterbaseProject.Tests
             List<Country> countries;
             using (var repo = new CountryRepository())
             {
-                countries = await repo.GetAllCountries();
+                countries = await repo.GetAllCountries(0, 1);
             }
 
             Assert.IsNotEmpty(countries);

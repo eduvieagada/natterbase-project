@@ -1,4 +1,5 @@
 ﻿using NatterbaseProject.Models;
+using PagedList;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -21,9 +22,9 @@ namespace NatterbaseProject.Repositories
             _db.Dispose();
         }
 
-        public async Task<List<Activity>> GetActivities(string name)
+        public async Task<List<Activity>> GetActivities(string name, int index, int size)
         {
-            var activities = await _db.Activities.Where(x => x.Name == name).ToListAsync();
+            var activities = await Task.Run(() =>_db.Activities.Where(x => x.Name == name).ToPagedList(index, size).ToList());
             return activities;
         }
 

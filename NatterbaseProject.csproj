@@ -54,6 +54,9 @@
     <Reference Include="nunit.framework, Version=3.11.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>packages\NUnit.3.11.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -245,6 +248,10 @@
     <Compile Include="Migrations\201903060807289_added controller name to activity.Designer.cs">
       <DependentUpon>201903060807289_added controller name to activity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903060830008_changed from datemodified to created.cs" />
+    <Compile Include="Migrations\201903060830008_changed from datemodified to created.Designer.cs">
+      <DependentUpon>201903060830008_changed from datemodified to created.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\ActivityRepository.cs" />
     <Compile Include="Repositories\CountryRepository.cs" />
     <Compile Include="Global.asax.cs">
@@ -371,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903060807289_added controller name to activity.resx">
       <DependentUpon>201903060807289_added controller name to activity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903060830008_changed from datemodified to created.resx">
+      <DependentUpon>201903060830008_changed from datemodified to created.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -13,6 +13,6 @@ namespace NatterbaseProject.Models
         public string Name { get; set; }
         [Required]
         public string Continent { get; set; }
-        public DateTime DateModified { get; set; }
+        public DateTime Created { get; set; }
     }
 }

@@ -12,7 +12,7 @@ namespace NatterbaseProject.Repositories
         Task CreateCountry(Country country);
         Task EditCountry(Country country);
         Task DeleteCountry(int id);
-        Task<List<Country>> GetAllCountries();
+        Task<List<Country>> GetAllCountries(int index, int size);
         Task<Country> FindCountry(int id);
     }
 }

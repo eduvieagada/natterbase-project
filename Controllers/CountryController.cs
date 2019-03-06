@@ -10,12 +10,12 @@ namespace NatterbaseProject.Controllers
     public class CountryController : ApiController
     {
         // GET /api/country
-        public async Task<IHttpActionResult> Get()
+        public async Task<IHttpActionResult> Get(int index, int size)
         {
 
             using (var db = new CountryRepository())
             {
-                var countries = await db.GetAllCountries();
+                var countries = await db.GetAllCountries(index, size);
 
                 return Ok(countries);
             }
@@ -35,7 +35,6 @@ namespace NatterbaseProject.Controllers
 
                 country.Continent = model.Continent;
                 country.Name = model.Name;
-                country.DateModified = DateTime.Now;
 
                 await db.EditCountry(country);
             }
@@ -57,7 +56,7 @@ namespace NatterbaseProject.Controllers
                 {
                     Continent = model.Continent,
                     Name = model.Name,
-                    DateModified = DateTime.Now
+                    Created = DateTime.Now
                 };
 
                 await db.CreateCountry(country);
